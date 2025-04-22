@@ -47,6 +47,15 @@ app.post('/contact', (req, res) => {
   res.send(`<h1>¡Gracias por contactarnos, ${name}!</h1><p>Tu mensaje ha sido guardado correctamente.</p>`);
 });
 
+app.get('/descargar-excel', (req, res) => {
+    const filePath = path.join(__dirname, 'contactos.xlsx');
+    if (fs.existsSync(filePath)) {
+      res.download(filePath, 'contactos.xlsx');
+    } else {
+      res.status(404).send('Archivo no encontrado');
+    }
+  });
+
 // Arrancar el servidor
 app.listen(PORT, () => {
   console.log(`Servidor corriendo en http://localhost:${PORT}`);
