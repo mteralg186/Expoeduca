@@ -1,4 +1,14 @@
 /* Magnific Popup CSS */
+#tm-sidebar {
+  width: 250px; /* o el valor que uses */
+  float: left;
+}
+
+.tm-main {
+  margin-left: 250px; /* igual al ancho del sidebar */
+  padding: 20px;
+}
+
 .mfp-bg {
     top: 0;
     left: 0;
