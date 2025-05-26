@@ -16,7 +16,38 @@ https://templatemo.com/tm-555-upright
 	https://tympanus.net/Development/HoverEffectIdeas/
 	
 */
-
+/* Logos arriba a la izquierda y derecha */
+.top-logos {
+    position: fixed;
+    top: 10px;
+    left: 0;
+    width: 100vw;
+    z-index: 1050;
+    pointer-events: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 2vw;
+}
+.top-logos img {
+    height: 60px;
+    width: auto;
+    pointer-events: auto;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    padding: 4px 8px;
+}
+@media (max-width: 576px) {
+    .top-logos img {
+        height: 38px;
+        padding: 2px 4px;
+    }
+    .top-logos {
+        top: 4px;
+        padding: 0 1vw;
+    }
+}
 html, body { overflow-x: hidden; }
 body { font-family: 'Kumbh Sans', sans-serif; }
 div, a, p { color: #666666; }
